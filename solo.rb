@@ -50,7 +50,7 @@ cookbook_path      [ "/var/lib/chef/cookbooks" ]
 # attributes and a run_list that Chef will use to configure the system.
 # Corresponds to chef-solo -j
 
-#json_attribs "/var/tmp/node.json"
+json_attribs "/var/tmp/node.json"
 #json_attribs "http://www.example.com/chef/node.json"
 
 # Mixlib::Log::Formatter.show_time specifies whether the log should

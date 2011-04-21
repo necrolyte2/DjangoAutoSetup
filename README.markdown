@@ -25,6 +25,7 @@ Tested with 10.10 Maverick
     * Change the base location of your apps
     * Modify the example app(you can add more too)
     * Enter in the git repo of your app. You don't have to do it, but it is a convinience thing)
+    * Give any extra options for git if you need them. BlueHost requires you to add -u /home/<username>/bin/git-upload-pack
         * NOTE: You will have to make sure to setup ssh keys for the git repos manually so they can connect
 * bash setup.sh
     * Enter none for the chef server url

@@ -20,7 +20,12 @@ Tested with 10.10 Maverick
 * Clone this repo anywhere you want
     * git clone git://github.com/necrolyte2/DjangoAutoSetup.git
 * Cd into the directory you just cloned into
-* Edit node.json and modify the name and location of your app
+* Copy node.json.example to node.json
+* Edit node.json
+    * Change the base location of your apps
+    * Modify the example app(you can add more too)
+    * Enter in the git repo of your app. You don't have to do it, but it is a convinience thing)
+        * NOTE: You will have to make sure to setup ssh keys for the git repos manually so they can connect
 * bash setup.sh
 
 # Notes

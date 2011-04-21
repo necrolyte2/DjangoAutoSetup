@@ -24,6 +24,6 @@ if ! [ -e $SYSCONFDIR/sites-enabled/$SITENAME -o \
 fi
 
 if ! rm $SYSCONFDIR/sites-enabled/$SITENAME 2>/dev/null; then
-        rm -f $SYSCONFDIR/sites-enabled/"$PRIORITY"-"$SITENAME"
+        rm -f $SYSCONFDIR/sites-enabled/$SITENAME
 fi
 echo "Site $SITENAME disabled; reload nginx to disable."

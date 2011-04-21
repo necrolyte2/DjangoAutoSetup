@@ -1,5 +1,12 @@
 #!/usr/bin/bash
 
+debug=""
+
+if [ "$1" == "-v" ]
+then
+	debug="-l debug"
+fi
+
 # Install chef
 if [ ! -f /etc/apt/sources.list.d/opscode.list ]
 then
@@ -11,7 +18,7 @@ then
 fi
 
 # Make sure the directory for the cookbooks exists
-sudo cp -R cookbooks /var/lib/chef/cookbooks
+sudo cp -R cookbooks /var/lib/chef/
 
 # Copy the node.json over
 sudo cp node.json /var/tmp/node.json
@@ -20,4 +27,4 @@ sudo cp node.json /var/tmp/node.json
 sudo cp solo.rb /etc/chef/solo.rb
 
 # Run Chef Solo
-sudo chef-solo
+sudo chef-solo ${debug}

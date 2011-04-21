@@ -1,9 +1,9 @@
 #
-# Cookbook Name:: django
-# Recipe:: default
-# Author:: Joshua Timberman (<joshua@opscode.com>)
+# Author:: Seth Chisamore <schisamo@opscode.com>
+# Cookbook Name:: python
+# Recipe:: package
 #
-# Copyright 2010, Opscode, Inc
+# Copyright 2011, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,5 +18,19 @@
 # limitations under the License.
 #
 
-default[:django][:web_server] = "mod_wsgi"
-default[:django][:app_name] = ""
+python_pkgs = value_for_platform(
+  ["debian","ubuntu"] => {
+    "default" => ["python","python-dev"]
+  },
+  ["centos","redhat","fedora"] => {
+    "default" => ["python26","python26-devel"]
+  },
+  "default" => ["python","python-dev"]
+)
+
+python_pkgs.each do |pkg|
+  package pkg do
+    action :install
+  end
+end
+

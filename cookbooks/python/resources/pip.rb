@@ -1,9 +1,9 @@
 #
-# Cookbook Name:: django
-# Recipe:: default
-# Author:: Joshua Timberman (<joshua@opscode.com>)
+# Author:: Seth Chisamore <schisamo@opscode.com>
+# Cookbook Name:: python
+# Resource:: pip
 #
-# Copyright 2010, Opscode, Inc
+# Copyright:: 2011, Opscode, Inc <legal@opscode.com>
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,5 +18,9 @@
 # limitations under the License.
 #
 
-default[:django][:web_server] = "mod_wsgi"
-default[:django][:app_name] = ""
+actions :install, :upgrade, :remove, :purge
+
+attribute :package_name, :kind_of => String, :name_attribute => true
+attribute :version, :default => nil
+attribute :virtualenv, :kind_of => String
+attribute :options, :kind_of => String

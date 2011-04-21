@@ -1,9 +1,8 @@
 #
-# Cookbook Name:: django
-# Recipe:: default
-# Author:: Joshua Timberman (<joshua@opscode.com>)
+# Cookbook Name:: vim
+# Attributes:: default
 #
-# Copyright 2010, Opscode, Inc
+# Copyright 2010, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -18,5 +17,4 @@
 # limitations under the License.
 #
 
-default[:django][:web_server] = "mod_wsgi"
-default[:django][:app_name] = ""
+default[:vim][:extra_packages] = []

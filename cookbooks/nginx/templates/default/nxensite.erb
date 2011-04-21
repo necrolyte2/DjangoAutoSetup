@@ -13,10 +13,6 @@ else
         SITENAME=$1
 fi
 
-if [ $SITENAME = "default" ]; then
-        PRIORITY="000"
-fi
-
 if [ -e $SYSCONFDIR/sites-enabled/$SITENAME -o \
      -e $SYSCONFDIR/sites-enabled/"$PRIORITY"-"$SITENAME" ]; then
         echo "This site is already enabled!"
@@ -30,7 +26,7 @@ fi
 
 if [ $SITENAME = "default" ]; then
         ln -sf $SYSCONFDIR/sites-available/$SITENAME \
-               $SYSCONFDIR/sites-enabled/"$PRIORITY"-"$SITENAME"
+               $SYSCONFDIR/sites-enabled/$SITENAME
 else
         ln -sf $SYSCONFDIR/sites-available/$SITENAME $SYSCONFDIR/sites-enabled/$SITENAME
 fi

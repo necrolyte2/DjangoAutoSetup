@@ -22,6 +22,7 @@ Tested with 10.10 Maverick
 * Cd into the directory you just cloned into
 * Edit node.json and modify the name and location of your app
 * bash setup.sh
+    * Enter none for the chef server url
 
 # Notes
 

@@ -9,7 +9,7 @@ What you end up with in the end is
 * Fups(python-fups)
 * Django
 * /opt/django as the root of your apps dir(where other apps will go)
-    ** You can change this but make sure that you have your app_dir under this app
+    * You can change this but make sure that you have your app_dir under this app
 
 Setup assumes the machine is Ubuntu
 Tested with 10.10 Maverick

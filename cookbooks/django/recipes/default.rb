@@ -31,7 +31,7 @@ package "python-flup" do
 end
 
 # Create the base level django folder
-directory "/opt/django" do
+directory "#{node[:django][:apps_dir]}" do
   owner "root"
   group "root"
   mode 0775

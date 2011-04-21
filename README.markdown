@@ -3,6 +3,13 @@
 This installer is a simple installer that will get a node up and running to the point that it is 
 serving on port 80 publically usinging Nginx which serves a django FCGI app in the background
 
+What you end up with in the end is
+* Nginx
+* Fups(python-fups)
+* Django
+* /opt/django as the root of your apps dir(where other apps will go)
+** You can change this but make sure that you have your app_dir under this app
+
 Setup assumes the machine is Ubuntu
 Tested with 10.10 Maverick
 

@@ -1,5 +1,6 @@
 {
   "django" : {
+    "apps_dir" : "/opt/django",
     "apps" : {
       "<name of your app>" : {
         "public_port" : 80,

@@ -1,12 +1,13 @@
 {
   "django" : {
-    "apps_dir" : "/opt/django",
+    "apps_dir" : "<apps dir>",
     "apps" : {
-      "<name of your app>" : {
+      "triptracker" : {
         "public_port" : 80,
         "local_port" : 8080,
         "local_ip" : "127.0.0.1",
-        "app_dir" : "<location of your app>"
+        "app_dir" : "<app dir>",
+        "repo" : "<git repo off app>"
       }
     }
   },

@@ -5,6 +5,10 @@ server {
   access_log  <%= node[:nginx][:log_dir] %>/localhost.access.log;
   error_log   <%= node[:nginx][:log_dir] %>/localhost.error.log;
 
+  location /media {
+    root <%= @app_dir %>;
+  }
+
   location / {
     # host and port to fastcgi server
     fastcgi_pass <%= @local_ip %>:<%= @local_port %>;

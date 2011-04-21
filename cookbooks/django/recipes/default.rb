@@ -48,8 +48,18 @@ node[:django][:apps].each do |app_name, values|
     variables({
       :public_port => values[:public_port],
       :local_ip => values[:local_ip],
-      :local_port => values[:local_port]
+      :local_port => values[:local_port],
+      :app_dir => "#{values[:app_dir]}/"
     })
+  end
+
+  if not values[:repo].empty?
+    # Get the latest source
+    git values[:app_dir] do
+      repository values[:repo]
+      reference "master"
+      action :sync
+    end
   end
 
   nginx_site app_name do

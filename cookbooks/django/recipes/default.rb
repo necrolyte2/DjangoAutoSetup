@@ -54,11 +54,16 @@ node[:django][:apps].each do |app_name, values|
   end
 
   if not values[:repo].empty?
+    # The native git doesn't work on BlueHost :(
     # Get the latest source
-    git values[:app_dir] do
-      repository values[:repo]
-      reference "master"
-      action :sync
+    #git values[:app_dir] do
+    #  repository values[:repo]
+    #  reference "master"
+    #  action :sync
+    #end
+    execute "git_clone" do
+        command "git clone #{values[:git_ops]} #{values[:repo]} #{values[:app_dir]}"
+        creates values[:app_dir]
     end
   end
 

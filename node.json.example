@@ -8,6 +8,7 @@
         "local_ip" : "127.0.0.1",
         "app_dir" : "<app dir>",
         "repo" : "<git repo off app>"
+        "git_ops" : "<any extra git options for the clone>"
       }
     }
   },

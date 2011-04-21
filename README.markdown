@@ -27,6 +27,7 @@ Tested with 10.10 Maverick
     * Enter in the git repo of your app. You don't have to do it, but it is a convinience thing)
         * NOTE: You will have to make sure to setup ssh keys for the git repos manually so they can connect
 * bash setup.sh
+    * Enter none for the chef server url
 
 # Notes
 

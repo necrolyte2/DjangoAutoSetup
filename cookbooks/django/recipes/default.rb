@@ -33,7 +33,7 @@ end
 # Create the base level django folder
 directory "#{node[:django][:apps_dir]}" do
   owner "root"
-  group "root"
+  group "admin"
   mode 0775
   action :create
 end

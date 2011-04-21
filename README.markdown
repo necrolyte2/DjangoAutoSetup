@@ -4,6 +4,7 @@ This installer is a simple installer that will get a node up and running to the 
 serving on port 80 publically usinging Nginx which serves a django FCGI app in the background
 
 What you end up with in the end is
+
 * Nginx
 * Fups(python-fups)
 * Django

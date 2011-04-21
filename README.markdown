@@ -18,6 +18,7 @@ Tested with 10.10 Maverick
 
 * Install git(ubuntu: apt-get install git-core)
 * Clone this repo anywhere you want
+    * git clone git://github.com/necrolyte2/DjangoAutoSetup.git
 * Cd into the directory you just cloned into
 * Edit node.json and modify the name and location of your app
 * bash setup.sh
